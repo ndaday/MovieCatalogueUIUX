@@ -28,12 +28,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@android:color/darker_gray"
+        android:text="@string/release"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toEndOf="@+id/image_view_Poster"
-        app:layout_constraintTop_toTopOf="@+id/image_view_Poster"
-        android:text="@string/release" />
+        app:layout_constraintTop_toTopOf="@+id/image_view_Poster" />
 
     <TextView
         android:id="@+id/textView_Rilis"
@@ -52,12 +52,12 @@
         android:layout_below="@id/textView_Rilis"
         android:layout_marginTop="12dp"
         android:background="@android:color/darker_gray"
+        android:text="@string/rating"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView_Rilis"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Rilis"
-        android:text="@string/rating" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Rilis" />
 
     <TextView
         android:id="@+id/textView_Rating"
