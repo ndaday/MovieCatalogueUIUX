@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,5 +45,8 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
 
         getSupportActionBar().setElevation(0);
+
+        AppCenter.start(getApplication(), "3f9d86ab-b3f9-4fd2-bd14-d0d5ddab9dec",
+                Analytics.class, Crashes.class);
     }
 }
