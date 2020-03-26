@@ -1,65 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    app:cardCornerRadius="6dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
 
-    <ImageView
-        android:id="@+id/img_poster"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:contentDescription="@string/image_poster"
-        tools:src="@android:color/darker_gray" />
-
-    <TextView
-        android:id="@+id/tv_rating"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="6dp"
-        android:layout_toEndOf="@id/img_poster"
-        android:background="@drawable/circle"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        tools:text="80" />
-
-    <LinearLayout
-        android:id="@+id/linear"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/tv_rating"
-        android:orientation="vertical">
+        android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/image_poster"
+            tools:src="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:id="@+id/tv_rating"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="6dp"
+            android:layout_toEndOf="@id/img_poster"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="14sp"
             android:textStyle="bold"
-            tools:text="Judul" />
+            tools:text="80" />
 
-        <TextView
-            android:id="@+id/tv_releasedate"
+        <LinearLayout
+            android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            tools:text="Rilis" />
-    </LinearLayout>
+            android:layout_toEndOf="@id/tv_rating"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_overview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linear"
-        android:layout_marginTop="6dp"
-        android:layout_toEndOf="@id/img_poster"
-        android:ellipsize="end"
-        android:maxLines="2"
-        tools:text="Sinopsis" />
-</RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Judul" />
+
+            <TextView
+                android:id="@+id/tv_releasedate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Rilis" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/img_poster"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Sinopsis" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
